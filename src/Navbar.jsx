@@ -1,12 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 
-const NavBar=()=>{
+const NavBar=(props)=>{
+  const handleClick = () => {
+    props.contactref.current?.scrollIntoView({behavior: 'smooth'});
+      };
+      const handleServiceClick = () => {
+        props.serviceref.current?.scrollIntoView({behavior: 'smooth'});
+          };
     return(
         <>
 
-        <div className="container-fluid nav_bg">
-            <div className="row">
+        <div className="container-fluid nav_bg  rder  ">
+            <div className="row bk " >
                 <div className="col-10 mx-auto">
 
         
@@ -16,15 +22,15 @@ const NavBar=()=>{
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+    <div className="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto mb-2  mb-lg-0">
         <li className="nav-item">
           <NavLink activeClassName="menu_active" exact className="nav-link active" aria-current="page" to=
     "/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink activeClassName="menu_active" className="nav-link" to=
-    "/contact">Contact</NavLink>
+          <NavLink activeClassName="menu_active" className="nav-link" onClick={handleClick} to=
+    "/con">Contact</NavLink>
         </li>
 
         <li className="nav-item">
@@ -33,7 +39,7 @@ const NavBar=()=>{
         </li>
 
         <li className="nav-item">
-          <NavLink  activeClassName="menu_active" className="nav-link" to=
+          <NavLink  activeClassName="menu_active" className="nav-link" onClick={handleServiceClick} to=
     "/service">service</NavLink>
         </li>
 

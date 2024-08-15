@@ -13,11 +13,11 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom";
 const App = () => {
   return (
     <>
-    <NavBar/>
+    
       <Switch>
         <Route path="/" exact  component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/service" component={Service} />
+        {/* <Route path="/service" component={Service} /> */}
         <Route path="/contact" component={Contact} />
         <Redirect to ="/" />
       </Switch>

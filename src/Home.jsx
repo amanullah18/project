@@ -1,20 +1,39 @@
 import React from "react";
 import am from "../src/images/img3.jpg"
-import { NavLink } from "react-router-dom/cjs/react-router-dom";
+import { NavLink, Route } from "react-router-dom/cjs/react-router-dom";
 import Common from "./Common";
+import Service from "./Service";
+import Portfolio from "./portfolio";
+import Footer from "./footer";
+import Contact from "./Contact";
+import NavBar from "./Navbar";
+import { useRef } from "react";
+
+
 
 
 
 const Home=()=>{
+    const serviceref = useRef(null);
+    const contactref= useRef(null);
     return(
         <>
+        <NavBar serviceref={serviceref} contactref={contactref}/>
+        <div className="home">
             <Common
           name="Grow Your business with"
           imgsrc={am}
           visit="/service"
           btname="Get Started"
             />
+          <div ref={serviceref}> <Service ></Service></div> 
+            <Portfolio></Portfolio>
+            <div ref={contactref}><Contact ></Contact></div> 
+            <Footer></Footer>
+            
+        </div>
         </>
+
     )
 }
 

@@ -6,6 +6,7 @@
   font-family: 'Teko', sans-serif; 
 }
 body {
+  /* background-color: #009087; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -19,7 +20,8 @@ code {
     monospace;
 }
 .navbar{
-  background-color: white !important;
+  background-color: #009087;
+  /* background-color: white !important; */
 }
 .navbar-brand{
   font-size: 1.9rem !important;
@@ -39,8 +41,8 @@ code {
 
 #header{
   width: 100%;
-  height: 80vh;
-  margin-top: 70px ;
+  height: 100vh;
+  padding-top: 70px;
   /* background-color: aqua; */
 }
 
@@ -72,7 +74,7 @@ code {
 
 .button2:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5,
+  box-shadow: inset 4px 4px 12px #0a0909,
              inset -4px -4px 12px #ffffff;
 }
 
@@ -127,11 +129,13 @@ code {
   text-align: right;
   /* max-width: 25px !important; */
   /* height: 10% !important */
-  background-color: #ffffff !important;
+  /* background-color: #ffffff !important; */
   
 }
 
 #header .animated{
+  background-color: #009087;
+
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
@@ -150,4 +154,22 @@ code {
   100%{
     transform: translateY(-10px);
   }
+}
+.home{
+  background-color: #009087;
+}
+.bk{
+  background-color: #009087;
+}
+.portmargin{
+  margin-top: 100px;
+}
+.servicesc{
+  background-color: #009087;
+}
+.servicesrow{
+  background-color: #009087;
+}
+.about{
+  background-color: #009087;
 }
